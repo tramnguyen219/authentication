@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import {
-  View, Text, TextInput, TouchableOpacity,
+  Text, TextInput, TouchableOpacity,
   StyleSheet, ActivityIndicator, KeyboardAvoidingView, Platform
 } from 'react-native'
 import { useForm, Controller } from 'react-hook-form'
@@ -54,7 +54,7 @@ export default function SignUpScreen() {
     setLoading(false)
 
     if (error) {
-      if (error.message.includes('you already have an account')) {
+      if (error.message.toLowerCase().includes('already registered')) {
         setAuthError('Email is already in use.')
       } else if (error.message.includes('weak')) {
         setAuthError('Password is too weak. Use at least 8 characters.')
