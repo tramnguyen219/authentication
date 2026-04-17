@@ -1,0 +1,11 @@
+{
+  "expo": {
+    "name": "auth-app",
+    "slug": "auth-app",
+    "version": "1.0.0",
+    "scheme": "auth-app",
+    "web": {
+      "bundler": "metro"
+    }
+  }
+}
